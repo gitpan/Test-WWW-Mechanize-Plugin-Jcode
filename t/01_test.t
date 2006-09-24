@@ -1,11 +1,9 @@
 use strict;
 use warnings;
-use Test::More tests => 10;
+use Test::More tests => 9;
 use Test::WWW::Mechanize;
+use Test::WWW::Mechanize::Plugin::Jcode;
 
-BEGIN {
-	use_ok 'Test::WWW::Mechanize::Plugin::Jcode'
-}
 can_ok('Test::WWW::Mechanize', 'content_charset_is');
 
 my $mech = Test::WWW::Mechanize->new;

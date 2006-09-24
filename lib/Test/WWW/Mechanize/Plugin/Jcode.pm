@@ -1,21 +1,19 @@
 package Test::WWW::Mechanize::Plugin::Jcode;
-
 use strict;
 use warnings;
-use vars qw($VERSION);
-$VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Test::WWW::Mechanize;
 use Jcode;
 use Test::More;
 
-*Test::WWW::Mechanize::content_charset_is = sub {
-	my $self = shift;
-	my $expected = shift;
-	my $test_name = shift;
-	my ($code,) = Jcode::getcode($self->content);
-	is($code, $expected, $test_name);
-};
+sub Test::WWW::Mechanize::content_charset_is {
+    my ($self, $expected, $test_name) = @_;
+
+    my ($code,) = Jcode::getcode($self->content);
+
+    is($code, $expected, $test_name);
+}
 
 1;
 __END__

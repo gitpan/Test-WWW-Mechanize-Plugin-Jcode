@@ -6,5 +6,6 @@ WriteMakefile(
                 Test::More => 0.32,
 				WWW::Mechanize    => '1.00',
 				Test::WWW::Mechanize    => '1.00',
+                Jcode => 0,
         },
 );

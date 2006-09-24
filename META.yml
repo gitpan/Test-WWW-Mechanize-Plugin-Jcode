@@ -1,10 +1,11 @@
 # http://module-build.sourceforge.net/META-spec.html
 #XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
 name:         Test-WWW-Mechanize-Plugin-Jcode
-version:      0.01
+version:      0.02
 version_from: lib/Test/WWW/Mechanize/Plugin/Jcode.pm
 installdirs:  site
 requires:
+    Jcode:                         0
     Test::More:                    0.32
     Test::WWW::Mechanize:          1.00
     WWW::Mechanize:                1.00
