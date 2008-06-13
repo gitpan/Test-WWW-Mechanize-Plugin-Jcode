@@ -1,22 +1,25 @@
 package Test::WWW::Mechanize::Plugin::Jcode;
 use strict;
 use warnings;
-our $VERSION = '0.02';
+use 5.00800;
+our $VERSION = '0.03';
 
 use Test::WWW::Mechanize;
 use Jcode;
 use Test::More;
 
 sub Test::WWW::Mechanize::content_charset_is {
-    my ($self, $expected, $test_name) = @_;
+    my ( $self, $expected, $test_name ) = @_;
 
-    my ($code,) = Jcode::getcode($self->content);
+    my ( $code, ) = Jcode::getcode( $self->content );
 
-    is($code, $expected, $test_name);
+    is( $code, $expected, $test_name );
 }
 
 1;
 __END__
+
+=for stopwords MATSUNO google sjis
 
 =head1 NAME
 
@@ -24,12 +27,12 @@ Test::WWW::Mechanize::Plugin::Jcode - add the charset test method to Test::WWW::
 
 =head1 SYNOPSIS
 
-  use Test::WWW::Mechanize;
-  use Test::WWW::Mechanize::Plugin::Jcode;
-  
-  my $mech = Test::WWW::Mechanize->new;
-  $mech->get_ok('http://www.google.co.jp/', 'get google');
-  $mech->content_charset_is('sjis', 'google is sjis');
+use Test::WWW::Mechanize;
+use Test::WWW::Mechanize::Plugin::Jcode;
+
+my $mech = Test::WWW::Mechanize->new;
+$mech->get_ok('http://www.google.co.jp/', 'get google');
+$mech->content_charset_is('sjis', 'google is sjis');
 
 =head1 DESCRIPTION
 
@@ -54,3 +57,4 @@ it under the same terms as Perl itself.
 L<WWW::Mechanize>, L<Test::WWW::Mechanize>
 
 =cut
+

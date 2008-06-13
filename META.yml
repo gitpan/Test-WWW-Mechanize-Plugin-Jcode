@@ -1,14 +1,26 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Test-WWW-Mechanize-Plugin-Jcode
-version:      0.02
-version_from: lib/Test/WWW/Mechanize/Plugin/Jcode.pm
-installdirs:  site
-requires:
-    Jcode:                         0
-    Test::More:                    0.32
-    Test::WWW::Mechanize:          1.00
-    WWW::Mechanize:                1.00
-
+---
+abstract: 'add the charset test method to Test::WWW::Mechanize'
+author:
+  - 'MATSUNO Tokuhiro <tokuhirom+cpan@gmail.com>'
+build_requires:
+  Test::More: 0
+  YAML: 0
 distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.17
+generated_by: 'Module::Install version 0.73'
+license: unknown
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.3.html
+  version: 1.3
+name: Test-WWW-Mechanize-Plugin-Jcode
+no_index:
+  directory:
+    - inc
+    - t
+requires:
+  Jcode: 0
+  Test::More: 0.32
+  Test::WWW::Mechanize: 1.00
+  WWW::Mechanize: 1.00
+  perl: 5.8.0
+tests: 't/*.t t/*/*.t t/*/*/*.t t/*/*/*/*.t xt/*.t'
+version: 0.03
